@@ -8,7 +8,7 @@ export function Accordion(props: AccordionPropsType) {
     return (
       <div>
         <AccordionTitle title={props.titleValue} />
-        <AccordionBody />
+        {!props.collapsed && <AccordionBody />}
       </div>
     );
   } else {

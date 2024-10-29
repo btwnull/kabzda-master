@@ -1,13 +1,16 @@
 type AccordionPropsType = {
   titleValue: string;
-  collapsed: boolean;
+  //   collapsed: boolean;
 };
 
-export function Accordion(props: AccordionPropsType) {
+export function UncontrolledAccordion(props: AccordionPropsType) {
+  const collapsed = false;
+
   return (
     <div>
       <AccordionTitle title={props.titleValue} />
-      {!props.collapsed && <AccordionBody />}
+      <button>TOGGLE</button>
+      {!collapsed && <AccordionBody />}
     </div>
   );
 }
